@@ -37,7 +37,7 @@ export function Hero({ ready }: { ready: boolean }) {
       gsap.set('.hero-letter', { yPercent: 115 })
       gsap.set('.hero-circ', { y: -90, autoAlpha: 0 })
       gsap.set('.hero-sub', { autoAlpha: 0, y: 12 })
-      gsap.set('.hero-fade', { autoAlpha: 0, y: 24 })
+      gsap.set('.hero-fade', { opacity: 0, y: 24 })
     }, root)
     return () => ctx.revert()
   }, [reduced])
@@ -50,7 +50,7 @@ export function Hero({ ready }: { ready: boolean }) {
       tl.to('.hero-letter', { yPercent: 0, duration: 1.8, stagger: 0.09 }, 0.15)
         .to('.hero-circ', { y: 0, autoAlpha: 1, duration: 1.6 }, 0.95)
         .to('.hero-sub', { autoAlpha: 1, y: 0, duration: 1.4 }, 1.15)
-        .to('.hero-fade', { autoAlpha: 1, y: 0, duration: 1.4, stagger: 0.08 }, 1.2)
+        .to('.hero-fade', { opacity: 1, y: 0, duration: 1.4, stagger: 0.08 }, 1.2)
 
       // salida: las letras se abren como una tela, el acento se eleva
       const out = gsap.timeline({

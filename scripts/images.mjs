@@ -15,7 +15,6 @@ export const IMAGES = [
   { key: 'retrato', id: '1742234081489-fab18d1aa664', page: 'dGDtoqYv1KQ', author: 'Beyza Yurtkuran', handle: 'beyzaayurtkuran' },
   { key: 'melena', id: '1646701096452-14eb85c86aac', page: 'd0L8WpvTBCc', author: 'Marco Guerrero', handle: 'marcoguerreroleon' },
   { key: 'manos', id: '1770892142008-b48dc2eeb360', page: 'Kv3fj21tngM', author: 'Severina Seidl', handle: 'myworldisblue' },
-  { key: 'salon', id: '1679621577331-4025252aa65b', page: 'ei0Sb1tgygQ', author: 'Matt Connor', handle: 'mattconnor' },
   { key: 'espejos', id: '1641252064345-235d409679eb', page: '9Snkrx_UU6A', author: 'Sean Boyd', handle: 'seanfboyd' },
   { key: 'tocador', id: '1637777277435-3c44f82fd0c9', page: 'u-jq0g_ZdZE', author: 'Giorgio Trovato', handle: 'giorgiotrovato' },
 ]

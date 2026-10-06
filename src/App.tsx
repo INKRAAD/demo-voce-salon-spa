@@ -51,7 +51,7 @@ export default function App() {
           })
         })
         gsap.utils.toArray<HTMLElement>('[data-fade]').forEach((el) => {
-          gsap.from(el, { y: 40, autoAlpha: 0, duration: 1.3, ease: 'expo.out', scrollTrigger: { trigger: el, start: 'top 97%', once: true } })
+          gsap.from(el, { y: 40, opacity: 0, duration: 1.3, ease: 'expo.out', scrollTrigger: { trigger: el, start: 'top 97%', once: true } })
         })
         gsap.utils.toArray<HTMLElement>('[data-clip]').forEach((el) => {
           gsap.fromTo(el, { clipPath: 'inset(100% 0% 0% 0%)' }, { clipPath: 'inset(0% 0% 0% 0%)', duration: 1.6, ease: 'expo.inOut', scrollTrigger: { trigger: el, start: 'top 85%', once: true } })

@@ -18,10 +18,10 @@ export function About() {
           </div>
           <div className="absolute -bottom-10 -right-4 hidden w-[46%] overflow-hidden border-8 border-noir md:block" data-clip>
             <div className="relative aspect-square">
-              <img data-parallax src="/img/salon-800.webp" alt="Sillones de un salón de belleza, en blanco y negro (imagen referencial)" loading="lazy" className="absolute inset-0 h-[118%] w-full object-cover" />
+              <img data-parallax src="/img/espejos-800.webp" alt="Espejos iluminados de un salón, en blanco y negro (imagen referencial)" loading="lazy" className="absolute inset-0 h-[118%] w-full object-cover" />
             </div>
           </div>
-          <p className="mt-4 text-[0.7rem] uppercase tracking-[0.18em] text-humo">Imágenes referenciales · Giorgio Trovato y Matt Connor / Unsplash</p>
+          <p className="mt-4 text-[0.7rem] uppercase tracking-[0.18em] text-humo md:mt-16 md:max-w-[50%]">Imágenes referenciales · Giorgio Trovato y Sean Boyd / Unsplash</p>
         </div>
 
         <div className="flex flex-col justify-center md:col-span-6 md:col-start-7">

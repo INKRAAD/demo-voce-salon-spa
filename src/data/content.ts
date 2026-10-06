@@ -94,10 +94,10 @@ export type GalleryItem = { img: string; caption: string; alt: string; credit: s
 export const LOOKBOOK: GalleryItem[] = [
   { img: 'retrato', caption: 'Mirada', alt: 'Retrato editorial de mujer en blanco y negro', credit: 'Beyza Yurtkuran' },
   { img: 'melena', caption: 'Melena', alt: 'Mujer de cabello largo con el viento, en blanco y negro', credit: 'Marco Guerrero' },
-  { img: 'salon', caption: 'El salón', alt: 'Interior de un salón de belleza con sillones, en blanco y negro', credit: 'Matt Connor' },
+  { img: 'espalda', caption: 'Brillo', alt: 'Cabello largo visto de espaldas, en blanco y negro', credit: 'Alexander Krivitskiy' },
   { img: 'manos', caption: 'Manos', alt: 'Manos en penumbra, en blanco y negro', credit: 'Severina Seidl' },
   { img: 'piedras', caption: 'Pausa', alt: 'Piedras de masaje sobre la piel, en blanco y negro', credit: 'Klara Kulikova' },
-  { img: 'espejos', caption: 'Luz', alt: 'Espejos iluminados de un salón, en blanco y negro', credit: 'Sean Boyd' },
+  { img: 'ondas', caption: 'Ondas', alt: 'Cabello ondulado de perfil, en blanco y negro', credit: 'Alef Morais' },
 ]
 
 // Créditos de imágenes (Unsplash License). Ver también scripts/images.mjs
@@ -113,7 +113,6 @@ export const CREDITS = [
   ['Beyza Yurtkuran', 'beyzaayurtkuran', 'dGDtoqYv1KQ'],
   ['Marco Guerrero', 'marcoguerreroleon', 'd0L8WpvTBCc'],
   ['Severina Seidl', 'myworldisblue', 'Kv3fj21tngM'],
-  ['Matt Connor', 'mattconnor', 'ei0Sb1tgygQ'],
   ['Sean Boyd', 'seanfboyd', '9Snkrx_UU6A'],
   ['Giorgio Trovato', 'giorgiotrovato', 'u-jq0g_ZdZE'],
 ] as const

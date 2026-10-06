@@ -152,13 +152,19 @@ function SilkMesh({ state, variant, segments, reduced }: { state: React.RefObjec
   )
 }
 
+let webglOk: boolean | null = null
+/** Detecta WebGL una sola vez y libera el contexto de prueba */
 function hasWebGL() {
+  if (webglOk !== null) return webglOk
   try {
     const c = document.createElement('canvas')
-    return !!(c.getContext('webgl2') || c.getContext('webgl'))
+    const gl = (c.getContext('webgl2') || c.getContext('webgl')) as WebGLRenderingContext | null
+    webglOk = !!gl
+    gl?.getExtension('WEBGL_lose_context')?.loseContext()
   } catch {
-    return false
+    webglOk = false
   }
+  return webglOk
 }
 
 type Props = {

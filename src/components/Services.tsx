@@ -20,7 +20,7 @@ export function Services() {
     if (!fine || !float.current) return
     const xTo = gsap.quickTo(float.current, 'x', { duration: 0.8, ease: 'power3' })
     const yTo = gsap.quickTo(float.current, 'y', { duration: 0.8, ease: 'power3' })
-    const rTo = gsap.quickTo(float.current, 'rotate', { duration: 1.2, ease: 'power3' })
+    const rTo = gsap.quickTo(float.current, 'rotation', { duration: 1.2, ease: 'power3' })
     let lx = 0
     const move = (e: PointerEvent) => {
       xTo(e.clientX)
@@ -50,7 +50,7 @@ export function Services() {
           </p>
         </div>
 
-        <ul ref={list} className="mt-16 border-t border-linea md:mt-24" onPointerLeave={() => setActive(null)}>
+        <ul ref={list} className="relative z-10 mt-16 border-t border-linea md:mt-24" onPointerLeave={() => setActive(null)}>
           {SERVICES.map((s, i) => {
             const isOpen = open === i
             return (
@@ -109,7 +109,7 @@ export function Services() {
 
       {/* imagen flotante (solo puntero fino) */}
       {fine && (
-        <div ref={float} className="pointer-events-none fixed left-0 top-0 z-30 hidden md:block" aria-hidden="true">
+        <div ref={float} className="pointer-events-none fixed left-0 top-0 z-[1] hidden md:block" aria-hidden="true">
           <div
             className="relative -translate-x-1/2 -translate-y-1/2 overflow-hidden transition-[clip-path,opacity] duration-700 ease-[var(--ease-silk)]"
             style={{ width: 'min(26vw, 380px)', aspectRatio: '4/5', clipPath: active === null ? 'inset(50% 50% 50% 50%)' : 'inset(0% 0% 0% 0%)', opacity: active === null ? 0 : 1 }}
@@ -120,7 +120,7 @@ export function Services() {
                 src={img(s.img)}
                 alt=""
                 className="absolute inset-0 h-full w-full object-cover transition-[opacity,transform] duration-[900ms] ease-[var(--ease-silk)]"
-                style={{ opacity: active === i ? 1 : 0, transform: active === i ? 'scale(1)' : 'scale(1.15)' }}
+                style={{ opacity: active === i ? 0.78 : 0, transform: active === i ? 'scale(1)' : 'scale(1.15)' }}
               />
             ))}
             <span className="label absolute bottom-3 left-3 text-[0.55rem] text-white/80 mix-blend-difference">Imagen referencial</span>
